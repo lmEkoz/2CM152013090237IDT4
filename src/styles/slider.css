@@ -1,0 +1,10 @@
+#xBar {
+    position: relative;
+    transform: rotate(-90deg);
+    top: 100px;
+}
+#yBar {
+    position: relative;
+    transform: rotate(-90deg);
+    top: 100px;
+}

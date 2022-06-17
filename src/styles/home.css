@@ -1,0 +1,10 @@
+body{
+    background-color: gradient(#a0bef8, #b5f0f0);; 
+}
+
+h1 {
+    text-shadow: red -.3rem 0, 
+                cyan .3rem 0;
+    font-size: 5rem;
+}
+
