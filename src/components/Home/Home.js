@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
-import Victory from "../Victory/Victory";
 import "../../styles/home.css";
+import Plane from "../Plane/Plane";
 
 const Home = (props) => {
     return(
         <Fragment>
             <h1>Welcome {props.user}</h1>
-            <Victory/>
+            <Plane/>
         </Fragment>
     )
 }

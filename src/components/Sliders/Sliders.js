@@ -3,7 +3,7 @@ import "../../styles/slider.css";
 import "../../Functions";
 
 const Sliders = (props) => {
-
+    console.log(props);
     function handlexBarChange(event) {
         props.setValueX (event.target.value);
         document.getElementById("xBarLabel").innerHTML = props.valueX;

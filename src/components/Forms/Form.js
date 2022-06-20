@@ -25,14 +25,14 @@ const Form = ({isUser}) => {
     };
 
     return (
-        <Fragment className="signin-form">
+        <div className="signin-form">
             <form onSubmit={handleSubmit}>
             <h1>  Sign In </h1>
             <input placeholder="Ingrese el usuario" type="text" id="user"  required/> <br/>
             <input placeholder="Ingrese la contraseña" type="password" id="password"  required/> <br/>
             <input type="submit" value="Submit" />
             </form>
-        </Fragment>
+        </div>
     );
 }
 
