@@ -35,6 +35,9 @@ const App = () => {
                         deleteQuestion = {id : ID } -> {status: [error, warning success], message :  'texto '}
                         editQuestion = {id : ID, question: {}} -> { status: [error, warning success], message : { question : {} } | 'texto'}
                         
+                        
+                        
+
                 */
             /* <Route path='/2CM152013090237IDT4/'   element={ <Login/> } />
             <Route path='/2CM152013090237IDT4/home' element={ <Home />}/>
