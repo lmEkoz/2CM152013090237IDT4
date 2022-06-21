@@ -14,13 +14,13 @@ function Welcome() {
           <a href="">Salir de la aplicación web</a>
         </div>
         <div>
-          <Title text='Welcome' />
+          <h1>Welcome</h1>
         </div>
         <div className="title-container">
-          <Title text='CREAR, ALTAS, BAJAS Y CAMBIOS DE EJERCICIOS' />
+          <h2>CREAR, ALTAS, BAJAS Y CAMBIOS DE EJERCICIOS</h2>
         </div>
         <div>
-          <a href=''>Crear un nuevo ejercicio</a>
+          <a href=''>Crear un nuevo ejercicio</a> <br /><br />
         </div>
         <div className="table-content">
           <BasicTable></BasicTable>
