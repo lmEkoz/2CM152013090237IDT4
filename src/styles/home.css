@@ -3,8 +3,7 @@ body{
 }
 
 h1 {
-    text-shadow: red -.3rem 0, 
-                cyan .3rem 0;
+
     font-size: 5rem;
 }
 

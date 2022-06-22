@@ -1,44 +1,63 @@
 .signin-form {
-    margin: 50px;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("dos.jpg");
+    background-size: cover;
+}
+
+form {
+  width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
 }
 
 form > h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: green;
+  color: #757575;
+  font-size: 40 px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
 input[type=text],
 input[type=password] {
 
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    padding: 0 10px 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    color: #8E8A92;
+    font-size: 14px;
+    outline: none;
 }
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  height: 40px;
+  border-radius: 25px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  outline: none;
+  background-color:#0F9F93;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  opacity: 0.6;
 }
 
