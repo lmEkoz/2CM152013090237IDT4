@@ -1,24 +1,37 @@
 import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 
 
 const App = () => {
     return(
         <Routes>
-            <Route index element={ <Login/> } />
-            <Route path='/home' element={ <Home />}/>
-            <Route path='/index.html' element={<Navigate to='/2CM152013090237IDT4/' replace/>} />
-            <Route path='/*' element={<h1>Resource not found!</h1>} />
+            <Route index element={ <Home/> } />
             
+            {/** Login routes*/}
+            {/* <Route path='/login' element={<Login/>} /> */}
+            
+            {/**CRUD Routes*/}
+            {/* <Route path='/home' element={<Home/>} />
+            <Route path='question/view/:id' element={<div></div>} />
+            <Route path='question/edit/:id' element={<div></div>}/>
+            <Route path='question/delete/:id' element={<div></div>}/>
+            <Route path='question/test/:id' element={<div></div>}/> */}
+            
+            {/** Redirections */}
+            {/* <Route index element={ <Navigate to='/login' replace />} />
+            <Route path='/question/view/all' element={<Navigate to='/home' replace/>} /> */}
+
+            {/** Others */}
+            {/* <Route path='/*' element={<h1>Resource not found!</h1>} /> */}
             {
                 /*
                     UI
                     home -> question/view/all
                     question/
-                        add/ -> Agrega la pregunta
                         view/all -> Muestra todas las preguntas
+                        add/ -> Agrega la pregunta
+
                         edit/:id -> Editan la pregunta 
                         delete/:id -> Elimina la pregunta con el id useParams()
                         test/:id -> Muestra la pregunta con el id useParams()
@@ -39,10 +52,6 @@ const App = () => {
                         
 
                 */
-            /* <Route path='/2CM152013090237IDT4/'   element={ <Login/> } />
-            <Route path='/2CM152013090237IDT4/home' element={ <Home />}/>
-            <Route path='/2CM152013090237IDT4/index.html' element={<Navigate to='/2CM152013090237IDT4/' replace/>} />
-            <Route path='/2CM152013090237IDT4/*' element={<h1>Resource not found!</h1>} /> */
             }
         </Routes>
     );
@@ -50,4 +59,4 @@ const App = () => {
 
 export default App;
 
-// /2CM152013090237IDT4/ 
+// /2CM152013090237IDPF/ 

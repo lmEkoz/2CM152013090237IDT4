@@ -1,0 +1,9 @@
+.title-container {
+    color: #757575;
+    font-size: 40 px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

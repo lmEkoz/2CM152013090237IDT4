@@ -1,30 +1,32 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Geogebra from "react-geogebra";
 
 const Graph = () => {
-    const [coordinate, setCoordinate] = useState({});
+    const [coordinate, setCoordinate] = useState({points: []});
     let  pairs = {x:0,y:0};
 
     function clickHandler(event) {
-        
-        setCoordinate(event =>({
-            ...coordinate,
-            ...pairs
-        }));
-       alert(coordinate);
+        event.preventDefault();
+        let value = document.getElementById("inputField").value;
+        value.trim();
+        value =value.replace('(','');
+        value = value.replace(')','');
+        value = value.split(',');
+        let copy = coordinate;
+        copy.points.push(value);
+        setCoordinate(copy);
+        console.log(coordinate);
+        dataHandler(coordinate);
     }
 
-    function dataHandler(coordinate) {
+    function dataHandler({points}) {
         const app = window.ggbApplet;
-        console.log(coordinate);
-        const x = coordinate.x;
-        const y = coordinate.y;
-        app.evalCommand(`Position A: (${x},${y})`);
-        setPosition(`Position A: (${x},${y})`);
-        
-        preventDefault();    
-        return document.getElementById("input").value = "";
+        for (let a of points){
+            let command = "("+a[0]+","+a[1]+")";
+            app.evalCommand(command);
+        }
+        return document.getElementById("inputField").value = "";
     }
 
     return (
@@ -36,8 +38,8 @@ const Graph = () => {
                 showToolBar= "false"
                 borderColor= "null"
                 showMenuBar= "false"
-                showAlgebraInput= "false"
-                showResetIcon= "true"
+                showAlgebraInput="false"
+                showResetIcon= "false"
                 enableLabelDrags= "false"
                 enableShiftDragZoom= "true"
                 enableRightClick= "false"
